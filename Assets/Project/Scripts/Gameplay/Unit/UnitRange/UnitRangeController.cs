@@ -19,43 +19,51 @@ public class UnitRangeController : UnitController
     
     private void Start()
     {
-        tagetPos = DetectTargetPos();
+        DetectTargetPos();
+    }
+    
+    private void Update()
+    {
+        CheckRotateModel();
     }
 
-    private Transform DetectTargetPos()
+    private void DetectTargetPos()
     {
         Transform nearestObject = null;
         float closestDistance = Mathf.Infinity;
-        
-        if (unitModel.gameObject.CompareTag("Player"))
+    
+        List<Transform> targetTransforms = unitModel.gameObject.CompareTag("Player") ?
+            EnemyController.Instance.EnemyUnits.ConvertAll(enemy => enemy.transform) :
+            PlayerController.Instance.PlayerUnits.ConvertAll(player => player.transform);
+
+        foreach (Transform targetTransform in targetTransforms)
         {
-            foreach (GameObject enemy in EnemyController.Instance.EnemyUnits)
+            float distance = Vector3.Distance(unitModel.transform.position, targetTransform.position);
+            if (distance < closestDistance)
             {
-                float distance = Vector3.Distance( unitModel.transform.position, enemy.transform.position);
-                if (distance < closestDistance)
-                {
-                    closestDistance = distance;
-                    nearestObject = enemy.transform;
-                }
+                closestDistance = distance;
+                nearestObject = targetTransform;
             }
-            
-            return nearestObject;
-        }
-        else if(unitModel.gameObject.CompareTag("Enemy"))
-        {
-            foreach (GameObject player in PlayerController.Instance.PlayerUnits)
-            {
-                float distance = Vector3.Distance(transform.position, player.transform.position);
-                if (distance < closestDistance)
-                {
-                    closestDistance = distance;
-                    nearestObject = player.transform;
-                }
-            }
-            
-            return nearestObject;
         }
 
-        return null;
+        targetPos = nearestObject;
+    }
+
+    private void CheckRotateModel()
+    {
+        if (targetPos != null)
+        {
+            float direction = Mathf.Sign(targetPos.position.x - unitModel.transform.position.x);
+            string side = direction > 0 ? "right" : "left";
+    
+            if (side == "left")
+            {
+                unitModel.transform.localScale = new Vector3(-Mathf.Abs(unitModel.transform.localScale.x), unitModel.transform.localScale.y, unitModel.transform.localScale.z);
+            }
+            else
+            {
+                unitModel.transform.localScale = new Vector3(Mathf.Abs(unitModel.transform.localScale.x), unitModel.transform.localScale.y, unitModel.transform.localScale.z);
+            }
+        }
     }
 }

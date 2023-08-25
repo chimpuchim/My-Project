@@ -602,6 +602,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6482352730081535078, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2848
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482352730081535078, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3123
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482352730081535078, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

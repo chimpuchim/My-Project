@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class UnitController : MonoBehaviour
 {
-    [SerializeField] protected Transform tagetPos;
+    [SerializeField] protected Transform targetPos;
     public Transform TargetPos
     {
-        get => tagetPos;
+        get => targetPos;
     }
     
     [Header("Setup")]
