@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3a65096aa31d824b9471e9967e7497e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagetPos: {fileID: 0}
+  targetPos: {fileID: 0}
   unitStats: {fileID: 3354767066912687864}
   unitDamageAble: {fileID: 4109036550822634186}
   unitMeleeAttack: {fileID: 8695684489273200022}

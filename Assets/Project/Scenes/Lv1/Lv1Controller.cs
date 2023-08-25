@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,16 @@ public class Lv1Controller : Controller
         return LV1_SCENE_NAME;
     }
 
+    private void Awake()
+    {
+        AddUIScene();
+    }
+
     private void Start() {
+    }
+
+    private void AddUIScene()
+    {
+        Manager.Add("UIScene");
     }
 }

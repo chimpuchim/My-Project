@@ -29,6 +29,9 @@ namespace SS.View
         /// </summary>
         [SerializeField]
         public SceneAnimation Animation;
+        
+        [SerializeField]
+        private bool isActiveShield = true;
 
         /// <summary>
         /// Each scene must has an unique scene name.
@@ -119,7 +122,7 @@ namespace SS.View
 
         public void CreateShield()
         {
-            if (m_Shield == null && m_Canvas.sortingOrder > 0)
+            if (m_Shield == null && m_Canvas.sortingOrder > 0 && isActiveShield == true)
             {
                 m_Shield = new GameObject("Shield");
                 m_Shield.layer = LayerMask.NameToLayer("UI");

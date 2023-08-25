@@ -58,7 +58,7 @@ public class UnitMeleeController : UnitController
     
     private void CheckRotateModel()
     {
-        if (targetPos != null)
+        if (targetPos != null && GameController.Instance.IsStartBattle)
         {
             float direction = Mathf.Sign(targetPos.position.x - unitMeleeModel.transform.position.x);
             string side = direction > 0 ? "right" : "left";

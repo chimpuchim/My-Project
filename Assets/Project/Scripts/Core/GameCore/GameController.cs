@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static GameController Instance;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private EnemyController enemyController;
+
+    [SerializeField] private bool isStartBattle;
+    public bool IsStartBattle
     {
-        
+        get => isStartBattle;
+        set => isStartBattle = value;
+    }
+    
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }    
+        else
+        {
+            Destroy(this);
+        }
     }
 }

@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fac0e939b3ee1e4998afd40cb8145d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 0
+  targetPos: {fileID: 0}
   unitStats: {fileID: 8690982353155902853}
   unitDamageAble: {fileID: 6415610435831543290}
   unitRangeAttack: {fileID: 7743814342457317288}

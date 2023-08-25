@@ -15,6 +15,9 @@ public class UnitMeleeMovement : UnitMovement
 
     private void Update()
     {
-        Movement(unitController.TargetPos.position);
+        if (GameController.Instance.IsStartBattle)
+        {
+            Movement(unitController.TargetPos.position);
+        }
     }
 }
