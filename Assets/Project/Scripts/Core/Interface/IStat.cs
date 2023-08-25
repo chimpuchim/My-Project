@@ -2,10 +2,10 @@ using System;
 
 public interface IStat
 {
-    int MaxHealth { get; }
-    int CurrentHealth { get; }
+    float MaxHealth { get; }
+    float CurrentHealth { get; }
 
-    event Action<int, int> HealthChanged;
+    event Action<float, float> HealthChanged;
     
-    void Heal(int healAmount);
+    void Heal(float healAmount);
 }

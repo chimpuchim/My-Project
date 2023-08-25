@@ -4,19 +4,19 @@ using UnityEngine;
 public class UnitStats : MonoBehaviour, IStat
 {
     [SerializeField] private UnitController unitController;
-    [SerializeField] private int maxHealth;
-    public int MaxHealth
+    [SerializeField] private float maxHealth;
+    public float MaxHealth
     {
         get => maxHealth;
     }
-    [SerializeField] private int currentHealth;
-    public int CurrentHealth
+    [SerializeField] private float currentHealth;
+    public float CurrentHealth
     {
         get => currentHealth;
         set => currentHealth = value;
     }
 
-    public event Action<int, int> HealthChanged;
+    public event Action<float, float> HealthChanged;
     
 
     private void Start()
@@ -25,7 +25,7 @@ public class UnitStats : MonoBehaviour, IStat
         HealthChanged?.Invoke(maxHealth, currentHealth);
     }
 
-    public void Heal(int healAmount)
+    public void Heal(float healAmount)
     {
         currentHealth += healAmount;
         currentHealth = Mathf.Min(currentHealth, maxHealth);

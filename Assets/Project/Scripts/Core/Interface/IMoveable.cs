@@ -1,6 +1,8 @@
+using UnityEngine;
+
 public interface IMoveable
 {
     float Speed { get; }
     
-    public void Movement();
+    public void Movement(Vector3 tagerPos);
 }

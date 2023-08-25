@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnitMovement : MonoBehaviour, IMoveable
 {
-    [SerializeField] private float speed;
+    [SerializeField] protected float speed;
     public float Speed
     {
         get => speed;
@@ -12,7 +12,7 @@ public class UnitMovement : MonoBehaviour, IMoveable
     }
     
 
-    public virtual void Movement()
+    public virtual void Movement(Vector3 tagetPos)
     {
         
     }
