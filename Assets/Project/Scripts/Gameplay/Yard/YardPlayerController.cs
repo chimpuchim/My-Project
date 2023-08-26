@@ -7,9 +7,9 @@ public class YardPlayerController : MonoBehaviour
 {
     public static YardPlayerController Instance;
     
-    [SerializeField] private List<GameObject> playerYards = new List<GameObject>();
+    [SerializeField] private List<BoxCollider2D> playerYards = new List<BoxCollider2D>();
     
-    public List<GameObject> PlayerYards
+    public List<BoxCollider2D> PlayerYards
     {
         get => playerYards;
     }
@@ -23,18 +23,6 @@ public class YardPlayerController : MonoBehaviour
         else
         {
             Destroy(this);
-        }
-
-        FindAndAddYards();
-    }
-    
-    private void FindAndAddYards()
-    {
-        GameObject[] yards = GameObject.FindGameObjectsWithTag("Yard");
-
-        foreach (GameObject yard in yards)
-        {
-            playerYards.Add(yard);
         }
     }
 }

@@ -7,6 +7,12 @@ using UnityEngine.Serialization;
 
 public class UnitController : MonoBehaviour
 {
+    [SerializeField] private bool isActive;
+    public bool IsActive
+    {
+        get => isActive;
+    }
+    
     [SerializeField] protected Transform targetPos;
     public Transform TargetPos
     {
