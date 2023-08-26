@@ -17,34 +17,42 @@ public class TouchEvent : MonoBehaviour
 
         if (hits.Length > 0)
         {
-            List<GameObject> hitObjects = new List<GameObject>();
-
             foreach (RaycastHit2D hit in hits)
             {
-                hitObjects.Add(hit.collider.gameObject);
+                if (hit.collider.gameObject.tag == "Yard")
+                {
+                    foreach (GameObject playerYard in YardPlayerController.Instance.PlayerYards)
+                    {
+                        if (playerYard.name != hit.collider.gameObject.name)
+                        {
+                            playerYard.GetComponent<SpriteRenderer>().enabled = false;
+                        }
+                    }
+                    
+                    hit.collider.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                }
             }
-
-            Debug.Log("Hit objects count: " + hitObjects.Count);
         }
     }
 
     public void DeSelected()
     {
         objSelected.localPosition = Vector2.zero;
-        SwitchColliderYard(false);
+        SwitchYard(false);
     }
 
     public void Selected()
     {
         objSelected = pressToSelect.Selectables[0].gameObject.transform;
-        SwitchColliderYard(true);
+        SwitchYard(true);
     }
 
-    private void SwitchColliderYard(bool switchable)
+    private void SwitchYard(bool switchable)
     {
-        foreach (BoxCollider2D playerYard in YardPlayerController.Instance.PlayerYards)
+        foreach (GameObject playerYard in YardPlayerController.Instance.PlayerYards)
         {
-            playerYard.enabled = switchable;
+            playerYard.GetComponent<BoxCollider2D>().enabled = switchable;
+            playerYard.GetComponent<SpriteRenderer>().enabled = switchable;
         }
     }
 }

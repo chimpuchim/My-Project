@@ -7,9 +7,9 @@ public class YardPlayerController : MonoBehaviour
 {
     public static YardPlayerController Instance;
     
-    [SerializeField] private List<BoxCollider2D> playerYards = new List<BoxCollider2D>();
+    [SerializeField] private List<GameObject> playerYards;
     
-    public List<BoxCollider2D> PlayerYards
+    public List<GameObject> PlayerYards
     {
         get => playerYards;
     }
