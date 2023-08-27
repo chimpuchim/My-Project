@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4152610282288228572}
   - component: {fileID: 2823648299774113927}
   - component: {fileID: 8558334999635835728}
+  - component: {fileID: 4081289919232162023}
   m_Layer: 0
   m_Name: Yard
   m_TagString: Yard
@@ -132,6 +133,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4081289919232162023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2457668170800245773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d52b5b3bb65fd1046a757bc42933a8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeUnits:
+  - {fileID: 8969454673816087502}
+  rangeUnits:
+  - {fileID: 8336412694554617565}
 --- !u!1 &7978115309422130333
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,6 +278,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
+--- !u!1 &8336412694554617565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5852751637670870358, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
+  m_PrefabInstance: {fileID: 2488737661519993739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9203743755156653700 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6715853963869822223, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
@@ -334,5 +356,10 @@ PrefabInstance:
 --- !u!4 &7250322181690124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5314435646138214329, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+  m_PrefabInstance: {fileID: 5321400094083806389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8969454673816087502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3864245375009169275, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
   m_PrefabInstance: {fileID: 5321400094083806389}
   m_PrefabAsset: {fileID: 0}
