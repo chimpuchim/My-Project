@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 6715853963869822223}
   - component: {fileID: 1101662928963004330}
   m_Layer: 0
-  m_Name: UnitRangeController
+  m_Name: Range1Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

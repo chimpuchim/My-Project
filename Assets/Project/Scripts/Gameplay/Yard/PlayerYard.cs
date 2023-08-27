@@ -15,6 +15,12 @@ public class PlayerYard : MonoBehaviour
         get => rangeUnits;
     }
 
+    [SerializeField] private GameObject unitActive;
+    public GameObject UnitActive
+    {
+        get => unitActive;
+    }
+
 
     public bool CheckEmpty()
     {
@@ -24,11 +30,13 @@ public class PlayerYard : MonoBehaviour
             {
                 if (child.gameObject.activeSelf)
                 {
+                    unitActive = child.gameObject;
                     return false;
                 }
             }
         }
 
+        unitActive = null;
         return true;
     }
 }

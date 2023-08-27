@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using Lean.Touch;
 using UnityEngine;
 
@@ -72,12 +73,47 @@ public class TouchEvent : MonoBehaviour
     {
         if (!CheckYardTouchEmpty(yardTouch) && yardTouch.gameObject.name != objSelected.parent.parent.parent.name)
         {
+            SwitchUnitMerge();
         }
     }
     
-    private void SwitchUnitMerge(List<GameObject> units, Transform objectSelected)
+    private void SwitchUnitMerge()
     {
-        
+        PlayerYard playerYard = yardTouch.GetComponent<PlayerYard>();
+        if (playerYard.UnitActive != null)
+        {
+            if (playerYard.UnitActive.name == objSelected.parent.name)
+            {
+                string numberUnit = Regex.Match(objSelected.parent.name, @"\d+").Value;
+                string typeUnit = objSelected.parent.name.Substring(0, Mathf.Min(5, objSelected.parent.name.Length));
+                
+                if (typeUnit == "Melee")
+                {
+                    if (int.Parse(numberUnit) >= playerYard.MeleeUnits.Count)
+                    {
+                        Debug.Log("Max level");
+                        return;
+                    }
+                    
+                    playerYard.MeleeUnits[int.Parse(numberUnit)].SetActive(true);
+                    playerYard.MeleeUnits[int.Parse(numberUnit) - 1].SetActive(false);
+                    objSelected.parent.gameObject.SetActive(false);
+                }
+                
+                if (typeUnit == "Range")
+                {
+                    if (int.Parse(numberUnit) >= playerYard.RangeUnits.Count)
+                    {
+                        Debug.Log("Max level");
+                        return;
+                    }
+                    
+                    playerYard.RangeUnits[int.Parse(numberUnit)].SetActive(true);
+                    playerYard.RangeUnits[int.Parse(numberUnit) - 1].SetActive(false);
+                    objSelected.parent.gameObject.SetActive(false);
+                }
+            }
+        }
     }
     
     private void SwitchUnitVisibility(List<GameObject> units, string objectSelectedName)

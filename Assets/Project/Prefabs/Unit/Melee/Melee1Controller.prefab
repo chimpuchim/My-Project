@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 5314435646138214329}
   - component: {fileID: 1502285524019855518}
   m_Layer: 0
-  m_Name: UnitMeleeController
+  m_Name: Melee1Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

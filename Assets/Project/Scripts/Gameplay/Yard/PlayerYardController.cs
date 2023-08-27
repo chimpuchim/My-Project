@@ -36,6 +36,8 @@ public class PlayerYardController : MonoBehaviour
 
     public void YardEmptyToList()
     {
+        playerYardsEmpty.Clear();
+        
         foreach (GameObject playerYard in playerYards)
         {
             if (playerYard.GetComponent<PlayerYard>().CheckEmpty() == true)

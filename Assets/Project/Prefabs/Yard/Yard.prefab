@@ -149,6 +149,7 @@ MonoBehaviour:
   - {fileID: 8969454673816087502}
   rangeUnits:
   - {fileID: 8336412694554617565}
+  unitActive: {fileID: 0}
 --- !u!1 &7978115309422130333
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5852751637670870358, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
       propertyPath: m_Name
-      value: UnitRangeController
+      value: Range1Controller
       objectReference: {fileID: 0}
     - target: {fileID: 5852751637670870358, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
       propertyPath: m_IsActive
@@ -302,7 +303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864245375009169275, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: m_Name
-      value: UnitMeleeController
+      value: Melee1Controller
       objectReference: {fileID: 0}
     - target: {fileID: 3864245375009169275, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: m_IsActive
