@@ -24,17 +24,32 @@ public class UnitMeleeController : UnitController
         get => unitMeleeModel;
     }
     
+    private UnitStateMachine stateMachine;
+    public UnitStateMachine StateMachine
+    {
+        get => stateMachine;
+    }
+    
     private void Start()
     {
         DetectTargetPos();
+        
+        stateMachine = new UnitStateMachine();
+        stateMachine.ChangeState(new UnitMeleeIdleState(this));
     }
 
     private void Update()
     {
         CheckRotateModel();
+        stateMachine.UpdateCurrentState();
     }
 
-    private void DetectTargetPos()
+    private void FixedUpdate()
+    {
+        stateMachine.FixedUpdateCurrentState();
+    }
+
+    public void DetectTargetPos()
     {
         Transform nearestObject = null;
         float closestDistance = Mathf.Infinity;

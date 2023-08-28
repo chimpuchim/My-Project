@@ -185,6 +185,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1154509616}
     m_Modifications:
+    - target: {fileID: 1536937308729730833, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: distanceAttack
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062967128252800533, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2457668170800245773, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: m_Name
       value: Yard3
@@ -614,6 +622,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4869391493325488490, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5314435646138214329, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.86991996
@@ -624,7 +636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314435646138214329, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 5314435646138214329, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: m_LocalPosition.y
@@ -670,6 +682,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6158752330738608800, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6482352730081535078, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2848
@@ -681,6 +697,10 @@ PrefabInstance:
     - target: {fileID: 6482352730081535078, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777961986484472010, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8669586726000884925, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: m_Enabled
@@ -2731,6 +2751,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1154509616}
     m_Modifications:
+    - target: {fileID: 2062967128252800533, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2457668170800245773, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: m_Name
       value: Yard4
@@ -2779,6 +2803,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8969454673816087502, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2823,6 +2851,10 @@ PrefabInstance:
     - target: {fileID: 533547745737974044, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062967128252800533, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2457668170800245773, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: m_Name
@@ -2875,6 +2907,10 @@ PrefabInstance:
     - target: {fileID: 4152610282288228572, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038574173504269051, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: initialSkinName
+      value: A_Skin_A
       objectReference: {fileID: 0}
     - target: {fileID: 8721887210581004575, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: m_Enabled

@@ -2,22 +2,34 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class UnitMeleeMovement : UnitMovement
 {
-    [SerializeField] private UnitMeleeController unitController;
+    [SerializeField] private UnitMeleeController unitMeleeController;
+    [SerializeField] private float distanceAttack;
+    
 
-    public override void Movement(Vector3 tagetPos)
+    public override void Movement(Vector3 targetPos)
     {
-        unitController.UnitMeleeModel.Agent.speed = speed;
-        unitController.UnitMeleeModel.Agent.SetDestination(tagetPos);
+        if (GameController.Instance.IsStartBattle)
+        {
+            float distance = Vector3.Distance(unitMeleeController.UnitMeleeModel.transform.position, targetPos);
+
+            if (distance > distanceAttack)
+            {
+                unitMeleeController.UnitMeleeModel.Agent.enabled = true;
+                unitMeleeController.UnitMeleeModel.Agent.SetDestination(targetPos);
+            }
+            else
+            {
+                unitMeleeController.UnitMeleeModel.Agent.enabled = false;
+            }
+        }
     }
 
     private void Update()
     {
-        if (GameController.Instance.IsStartBattle)
-        {
-            Movement(unitController.TargetPos.position);
-        }
+        Movement(unitMeleeController.TargetPos.position);
     }
 }

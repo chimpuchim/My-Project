@@ -16,4 +16,10 @@ public class UnitStateMachine
         if (currentState != null)
             currentState.Update();
     }
+    
+    public void FixedUpdateCurrentState()
+    {
+        if (currentState != null)
+            currentState.Update();
+    }
 }

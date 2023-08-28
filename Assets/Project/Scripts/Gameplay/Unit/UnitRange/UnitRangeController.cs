@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,14 +18,29 @@ public class UnitRangeController : UnitController
         get => unitModel;
     }
     
+    private UnitStateMachine stateMachine;
+    public UnitStateMachine StateMachine
+    {
+        get => stateMachine;
+    }
+    
     private void Start()
     {
         DetectTargetPos();
+                
+        stateMachine = new UnitStateMachine();
+        stateMachine.ChangeState(new UnitRangeIdleState(this));
     }
     
     private void Update()
     {
         CheckRotateModel();
+        stateMachine.UpdateCurrentState();
+    }
+
+    private void FixedUpdate()
+    {
+        stateMachine.FixedUpdateCurrentState();
     }
 
     public void DetectTargetPos()
