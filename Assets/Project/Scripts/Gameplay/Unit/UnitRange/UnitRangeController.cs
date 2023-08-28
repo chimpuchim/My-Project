@@ -12,10 +12,10 @@ public class UnitRangeController : UnitController
         get => unitRangeAttack;
     }
     
-    [SerializeField] private UnitModel unitModel;
+    [SerializeField] private UnitRangeModel unitRangeModel;
     public UnitModel UnitModel
     {
-        get => unitModel;
+        get => unitRangeModel;
     }
     
     private UnitStateMachine stateMachine;
@@ -48,13 +48,13 @@ public class UnitRangeController : UnitController
         Transform nearestObject = null;
         float closestDistance = Mathf.Infinity;
     
-        List<Transform> targetTransforms = unitModel.gameObject.CompareTag("Player") ?
+        List<Transform> targetTransforms = unitRangeModel.gameObject.CompareTag("Player") ?
             EnemyController.Instance.EnemyUnits.ConvertAll(enemy => enemy.transform) :
             PlayerController.Instance.PlayerUnits.ConvertAll(player => player.transform);
 
         foreach (Transform targetTransform in targetTransforms)
         {
-            float distance = Vector3.Distance(unitModel.transform.position, targetTransform.position);
+            float distance = Vector3.Distance(unitRangeModel.transform.position, targetTransform.position);
             if (distance < closestDistance)
             {
                 closestDistance = distance;
@@ -69,16 +69,16 @@ public class UnitRangeController : UnitController
     {
         if (targetPos != null && GameController.Instance.IsStartBattle)
         {
-            float direction = Mathf.Sign(targetPos.position.x - unitModel.transform.position.x);
+            float direction = Mathf.Sign(targetPos.position.x - unitRangeModel.transform.position.x);
             string side = direction > 0 ? "right" : "left";
     
             if (side == "left")
             {
-                unitModel.transform.localScale = new Vector3(-Mathf.Abs(unitModel.transform.localScale.x), unitModel.transform.localScale.y, unitModel.transform.localScale.z);
+                unitRangeModel.transform.localScale = new Vector3(-Mathf.Abs(unitRangeModel.transform.localScale.x), unitRangeModel.transform.localScale.y, unitRangeModel.transform.localScale.z);
             }
             else
             {
-                unitModel.transform.localScale = new Vector3(Mathf.Abs(unitModel.transform.localScale.x), unitModel.transform.localScale.y, unitModel.transform.localScale.z);
+                unitRangeModel.transform.localScale = new Vector3(Mathf.Abs(unitRangeModel.transform.localScale.x), unitRangeModel.transform.localScale.y, unitRangeModel.transform.localScale.z);
             }
         }
     }

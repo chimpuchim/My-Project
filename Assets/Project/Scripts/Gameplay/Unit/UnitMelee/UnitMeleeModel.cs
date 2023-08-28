@@ -21,4 +21,12 @@ public class UnitMeleeModel : UnitModel
         agent.updateRotation = false;
         agent.updateUpAxis = false;
     }
+    
+    public void ChangeAnimation(string state, float speed)
+    {
+        if (!animator.IsInTransition(0))
+        {
+            animator.CrossFade(state, speed);
+        }
+    }
 }
