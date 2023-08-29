@@ -20,6 +20,6 @@ public class UnitStateMachine
     public void FixedUpdateCurrentState()
     {
         if (currentState != null)
-            currentState.Update();
+            currentState.FixUpdate();
     }
 }

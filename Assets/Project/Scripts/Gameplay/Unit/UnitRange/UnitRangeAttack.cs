@@ -6,7 +6,7 @@ public class UnitRangeAttack : UnitAttack
 {
     [SerializeField] private UnitRangeController unitRangeController;
 
-    protected override void AttackNor()
+    public override void AttackNor()
     {
         
     }

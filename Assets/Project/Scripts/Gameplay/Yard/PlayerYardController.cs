@@ -40,7 +40,7 @@ public class PlayerYardController : MonoBehaviour
         
         foreach (GameObject playerYard in playerYards)
         {
-            if (playerYard.GetComponent<PlayerYard>().CheckEmpty() == true)
+            if (playerYard.GetComponent<PlayerYard>().CheckEmpty())
             {
                 playerYardsEmpty.Add(playerYard);
             }

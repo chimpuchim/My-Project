@@ -9,7 +9,7 @@ public class UnitRangeIdleState : IUnitState
     
     public void Enter()
     {
-        
+        unitRangeController.UnitRangeModel.ChangeAnimation("Idle", 1);
     }
 
     public void Update()
@@ -19,7 +19,10 @@ public class UnitRangeIdleState : IUnitState
 
     public void FixUpdate()
     {
-        
+        if (GameController.Instance.IsStartBattle)
+        {
+            unitRangeController.StateMachine.ChangeState(new UnitRangeAtkState(unitRangeController));
+        }
     }
 
     public void Exit()

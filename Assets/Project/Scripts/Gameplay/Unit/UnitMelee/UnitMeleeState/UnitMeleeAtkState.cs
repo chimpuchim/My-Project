@@ -9,7 +9,8 @@ public class UnitMeleeAtkState : IUnitState
     
     public void Enter()
     {
-        
+        unitMeleeController.UnitMeleeModel.ChangeAnimation("Attack", 1f);
+        unitMeleeController.UnitMeleeModel.Agent.enabled = false;
     }
 
     public void Update()
@@ -19,7 +20,14 @@ public class UnitMeleeAtkState : IUnitState
 
     public void FixUpdate()
     {
-        
+        if (unitMeleeController.DistanceToTarget > unitMeleeController.DistanceAttack)
+        {
+            unitMeleeController.StateMachine.ChangeState(new UnitMeleeRunState(unitMeleeController));
+        }
+        else
+        {
+            unitMeleeController.UnitMeleeAttack.AttackNor();
+        }
     }
 
     public void Exit()

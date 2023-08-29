@@ -17,6 +17,7 @@ public class UnitController : MonoBehaviour
     public Transform TargetPos
     {
         get => targetPos;
+        set => targetPos = value;
     }
     
     [Header("Setup")]
@@ -30,5 +31,24 @@ public class UnitController : MonoBehaviour
     public UnitDamageAble UnitDamageAble
     {
         get => unitDamageAble;
+    }
+    
+    
+    protected void CheckRotateModel(Transform unitModel)
+    {
+        if (targetPos != null && GameController.Instance.IsStartBattle)
+        {
+            float direction = Mathf.Sign(targetPos.position.x - unitModel.position.x);
+            string side = direction > 0 ? "right" : "left";
+    
+            if (side == "left")
+            {
+                unitModel.localScale = new Vector3(-Mathf.Abs(unitModel.localScale.x), unitModel.localScale.y, unitModel.localScale.z);
+            }
+            else
+            {
+                unitModel.localScale = new Vector3(Mathf.Abs(unitModel.localScale.x), unitModel.localScale.y, unitModel.localScale.z);
+            }
+        }
     }
 }

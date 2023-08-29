@@ -185,6 +185,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1154509616}
     m_Modifications:
+    - target: {fileID: 741656819312752095, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1536937308729730833, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: distanceAttack
       value: 0.4
@@ -244,6 +248,10 @@ PrefabInstance:
     - target: {fileID: 4152610282288228572, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460640240911092551, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8969454673816087502, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: m_IsActive
@@ -337,6 +345,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1154509616}
     m_Modifications:
+    - target: {fileID: 857471567061631160, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2457668170800245773, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: m_Name
       value: Yard15
@@ -419,6 +431,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4152610282288228572, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460640240911092551, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482334783962312729, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8336412694554617565, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
@@ -602,13 +622,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1894456376}
     m_Modifications:
+    - target: {fileID: 149039277990084594, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1502285524019855518, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161568474837715644, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3518216224597894570, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708281198044926465, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3864245375009169275, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: m_Name
@@ -1009,13 +1041,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2985777079628192563, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3765735175076414939, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4998804685127576466, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5852751637670870358, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
       propertyPath: m_Name
@@ -1788,13 +1824,13 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2985777079628192563, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3765735175076414939, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4998804685127576466, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5852751637670870358, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
       propertyPath: m_Name
@@ -2667,6 +2703,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1154509616}
     m_Modifications:
+    - target: {fileID: 857471567061631160, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2457668170800245773, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
       propertyPath: m_Name
       value: Yard11

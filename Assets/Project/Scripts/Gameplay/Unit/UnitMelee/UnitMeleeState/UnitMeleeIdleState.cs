@@ -9,7 +9,7 @@ public class UnitMeleeIdleState : IUnitState
     
     public void Enter()
     {
-        
+        unitMeleeController.UnitMeleeModel.ChangeAnimation("Idle", 1);
     }
 
     public void Update()
@@ -19,7 +19,10 @@ public class UnitMeleeIdleState : IUnitState
 
     public void FixUpdate()
     {
-        
+        if (GameController.Instance.IsStartBattle)
+        {
+            unitMeleeController.StateMachine.ChangeState(new UnitMeleeRunState(unitMeleeController));
+        }
     }
 
     public void Exit()

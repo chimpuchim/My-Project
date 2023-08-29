@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnitAttack : MonoBehaviour
 {
-    protected virtual void AttackNor()
+    public virtual void AttackNor()
     {
         
     }

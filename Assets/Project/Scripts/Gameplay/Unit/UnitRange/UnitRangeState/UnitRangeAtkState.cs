@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class UnitRangeAtkState : IUnitState
 {
     private UnitRangeController unitRangeController;
@@ -9,7 +11,7 @@ public class UnitRangeAtkState : IUnitState
     
     public void Enter()
     {
-        
+        unitRangeController.UnitRangeModel.ChangeAnimation("Attack", 1);
     }
 
     public void Update()
@@ -19,7 +21,7 @@ public class UnitRangeAtkState : IUnitState
 
     public void FixUpdate()
     {
-        
+        unitRangeController.UnitRangeAttack.AttackNor();
     }
 
     public void Exit()

@@ -58,6 +58,9 @@ public class TouchEvent : MonoBehaviour
 
         SwitchUnitToEmpty(objSelected.parent.name, playerYard);
         SwitchUnitToNoneEmpty(objSelected.parent, playerYard);
+        
+        PlayerController.Instance.FindAndAddPlayers();
+        EnemyController.Instance.FindAndAddEnemies();
     }
 
     private void SwitchUnitToEmpty(string objectSelectedName, PlayerYard playerYard)
