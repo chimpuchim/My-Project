@@ -6,6 +6,5 @@ public class UnitAttack : MonoBehaviour
 {
     public virtual void AttackNor()
     {
-        
     }
 }

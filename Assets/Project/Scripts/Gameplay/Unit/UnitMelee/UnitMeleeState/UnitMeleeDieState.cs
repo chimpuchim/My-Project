@@ -9,7 +9,7 @@ public class UnitMeleeDieState : IUnitState
     
     public void Enter()
     {
-        
+        unitMeleeController.UnitMeleeModel.ChangeAnimation("Die", 1f);
     }
 
     public void Update()

@@ -7,10 +7,11 @@ using UnityEngine.Serialization;
 
 public class UnitController : MonoBehaviour
 {
-    [SerializeField] private bool isActive;
-    public bool IsActive
+    [SerializeField] private bool isDead;
+    public bool IsDead
     {
-        get => isActive;
+        get => isDead;
+        set => isDead = value;
     }
     
     [SerializeField] protected Transform targetPos;
@@ -32,8 +33,7 @@ public class UnitController : MonoBehaviour
     {
         get => unitDamageAble;
     }
-    
-    
+
     protected void CheckRotateModel(Transform unitModel)
     {
         if (targetPos != null && GameController.Instance.IsStartBattle)

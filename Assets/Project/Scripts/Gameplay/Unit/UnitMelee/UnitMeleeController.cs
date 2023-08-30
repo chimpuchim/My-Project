@@ -29,18 +29,25 @@ public class UnitMeleeController : UnitController
     {
         get => stateMachine;
     }
+
+    private UnitMeleeUIHealthBar unitMeleeUIHealthBar;
+    public UnitMeleeUIHealthBar UnitMeleeUIHealthBar
+    {
+        get => unitMeleeUIHealthBar;
+    }
     
     [SerializeField] private float distanceToTarget;
     public float DistanceToTarget
     {
         get => distanceToTarget;
     }
+    
     [SerializeField] private float distanceAttack;
     public float DistanceAttack
     {
         get => distanceAttack;
     }
-
+    
     
     private void Start()
     {
@@ -50,7 +57,7 @@ public class UnitMeleeController : UnitController
 
     private void Update()
     {
-        distanceToTarget = Vector3.Distance(unitMeleeModel.transform.position, targetPos.position);
+        distanceToTarget = Vector2.Distance(unitMeleeModel.transform.position, targetPos.position);
         CheckRotateModel(unitMeleeModel.transform);
         stateMachine.UpdateCurrentState();
     }

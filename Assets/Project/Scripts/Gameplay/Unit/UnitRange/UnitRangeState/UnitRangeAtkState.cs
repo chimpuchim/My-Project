@@ -16,12 +16,15 @@ public class UnitRangeAtkState : IUnitState
 
     public void Update()
     {
-        
+        if (unitRangeController.IsDead)
+        {
+            unitRangeController.StateMachine.ChangeState(new UnitRangeDieState(unitRangeController));
+        }
     }
 
     public void FixUpdate()
     {
-        unitRangeController.UnitRangeAttack.AttackNor();
+        
     }
 
     public void Exit()

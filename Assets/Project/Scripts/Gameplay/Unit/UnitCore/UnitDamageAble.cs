@@ -15,10 +15,15 @@ public class UnitDamageAble : MonoBehaviour, IRecieveDamage, ISendDamege
     public void RecieveDamage(float damageRecieve)
     {
         unitController.UnitStats.Heal(-damageRecieve);
+
+        if (unitController.UnitStats.CurrentHealth <= 0)
+        {
+            unitController.IsDead = true;
+        }
     }
 
 
-    public void SendDamege(IRecieveDamage client)
+    public void SendDamage(IRecieveDamage client)
     {
         client.RecieveDamage(damage);
     }

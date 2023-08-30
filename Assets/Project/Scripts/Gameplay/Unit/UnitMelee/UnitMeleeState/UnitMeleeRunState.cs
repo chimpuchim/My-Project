@@ -15,7 +15,10 @@ public class UnitMeleeRunState : IUnitState
 
     public void Update()
     {
-        
+        if (unitMeleeController.IsDead)
+        {
+            unitMeleeController.StateMachine.ChangeState(new UnitMeleeDieState(unitMeleeController));
+        }
     }
 
     public void FixUpdate()
@@ -27,6 +30,7 @@ public class UnitMeleeRunState : IUnitState
         else
         {
             unitMeleeController.StateMachine.ChangeState(new UnitMeleeAtkState(unitMeleeController));
+            unitMeleeController.UnitMeleeModel.Agent.enabled = false;
         }
     }
 

@@ -15,6 +15,12 @@ public class UnitMeleeModel : UnitModel
         get => agent;
     }
 
+    [SerializeField] private GameObject fightFx;
+    public GameObject FightFx
+    {
+        get => fightFx;
+    }
+
 
     private void Start()
     {

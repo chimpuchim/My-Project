@@ -6,5 +6,5 @@ public interface IRecieveDamage
 public interface ISendDamege
 {
     float Damage{ get; set; }
-    public void SendDamege(IRecieveDamage client);
+    public void SendDamage(IRecieveDamage client);
 }
