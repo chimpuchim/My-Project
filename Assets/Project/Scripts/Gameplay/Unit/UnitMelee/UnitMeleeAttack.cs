@@ -11,5 +11,6 @@ public class UnitMeleeAttack : UnitAttack
     {
         unitMeleeController.UnitDamageAble.SendDamage(unitMeleeController.TargetPos.parent.gameObject.GetComponent<UnitController>().UnitDamageAble);
         unitMeleeController.UnitMeleeModel.FightFx.GetComponent<ParticleSystem>().Play();
+        unitMeleeController.UnitMeleeUIHealthBar.ShowDameSendText();
     }
 }

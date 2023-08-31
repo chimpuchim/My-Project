@@ -433,6 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5912296330021543710}
   sliderHealthBar: {fileID: 1272409956611854684}
+  model: {fileID: 4921954196374975171}
 --- !u!114 &2775914377941054231
 MonoBehaviour:
   m_ObjectHideFlags: 0

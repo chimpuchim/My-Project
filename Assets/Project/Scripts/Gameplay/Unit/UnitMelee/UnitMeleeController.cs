@@ -30,7 +30,7 @@ public class UnitMeleeController : UnitController
         get => stateMachine;
     }
 
-    private UnitMeleeUIHealthBar unitMeleeUIHealthBar;
+    [SerializeField] private UnitMeleeUIHealthBar unitMeleeUIHealthBar;
     public UnitMeleeUIHealthBar UnitMeleeUIHealthBar
     {
         get => unitMeleeUIHealthBar;
