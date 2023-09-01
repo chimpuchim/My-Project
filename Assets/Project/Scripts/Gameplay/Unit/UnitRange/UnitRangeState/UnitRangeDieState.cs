@@ -9,7 +9,8 @@ public class UnitRangeDieState : IUnitState
     
     public void Enter()
     {
-        
+        unitRangeController.UnitRangeModel.ChangeAnimation("Die", 1f);
+        unitRangeController.UnitRangeModel.BoxCollider2D.enabled = false;
     }
 
     public void Update()

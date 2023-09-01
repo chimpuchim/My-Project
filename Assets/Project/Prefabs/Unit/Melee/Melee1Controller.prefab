@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 3670970928631670214}
   - component: {fileID: 3708281198044926465}
   - component: {fileID: 2161568474837715644}
+  - component: {fileID: 330233518685665131}
   m_Layer: 0
   m_Name: ModelMelee1
   m_TagString: Player
@@ -645,6 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2533350138258390399}
+  boxCollider2D: {fileID: 4495370057886423721}
   sliderHealthBar: {fileID: 8612691026907922469}
   unitMeleeController: {fileID: 1502285524019855518}
   agent: {fileID: 2861167671094658599}
@@ -704,6 +706,33 @@ MonoBehaviour:
   onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
+--- !u!50 &330233518685665131
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4869391493325488490}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &5182504080504094069
 GameObject:
   m_ObjectHideFlags: 0

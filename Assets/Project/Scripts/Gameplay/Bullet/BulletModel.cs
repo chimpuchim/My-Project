@@ -1,17 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class BulletModel : MonoBehaviour
 {
+    [SerializeField] private BulletController bulletController;
     [SerializeField] private Rigidbody2D rigidbody2D;
     public Rigidbody2D Rigidbody2D
     {
         get => rigidbody2D;
     }
-    
-    // void OnTriggerEnter2D(IRecieveDamage client)
-    // {
-    //     
-    // }
+
+    private string unitType;
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (bulletController.IsEnemy)
+        {
+            unitType = "Player";
+        }
+        else
+        {
+            unitType = "Enemy";
+        }
+
+        
+        if (other.transform.parent.GetComponent<UnitController>() != null && other.CompareTag(unitType))
+        {
+            UnitController unitController = other.transform.parent.gameObject.GetComponent<UnitController>();
+            unitController.UnitDamageAble.SendDamage(unitController.UnitDamageAble);
+            
+            Destroy(gameObject);
+        }
+    }
 }

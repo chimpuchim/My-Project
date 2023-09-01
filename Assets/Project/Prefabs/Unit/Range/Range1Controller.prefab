@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 8619771027701221966}
   - component: {fileID: 5912296330021543710}
   - component: {fileID: 8535319128039045308}
+  - component: {fileID: 842025757285055090}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (Sword)
   m_TagString: Untagged
@@ -236,6 +237,21 @@ MonoBehaviour:
     layerMixModes: 01000000
     layerBlendModes: 01000000
   updateTiming: 1
+--- !u!114 &842025757285055090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421057824265248793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561c4b868b46f5d459c2ccb9068eef4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitRangeController: {fileID: 1101662928963004330}
+  bulletPrefab:
+  - {fileID: 8150718635696652647, guid: 482c0d1691269454bb9795e8cdf92ade, type: 3}
 --- !u!1 &1419727840466346507
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +313,7 @@ GameObject:
   - component: {fileID: 5256083806518909581}
   - component: {fileID: 2775914377941054231}
   - component: {fileID: 3765735175076414939}
+  - component: {fileID: 7791297920870346263}
   m_Layer: 0
   m_Name: ModelRange1
   m_TagString: Player
@@ -432,8 +449,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5912296330021543710}
+  boxCollider2D: {fileID: 2869523101062590166}
   sliderHealthBar: {fileID: 1272409956611854684}
-  model: {fileID: 4921954196374975171}
 --- !u!114 &2775914377941054231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,6 +506,33 @@ MonoBehaviour:
   damping: -1
   inertia: 0
   remainingTranslation: {x: 0, y: 0, z: 0}
+--- !u!50 &7791297920870346263
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616805028212983871}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &2495468713595404449
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +887,6 @@ Transform:
   - {fileID: 2386359923686055179}
   - {fileID: 4150182560987896433}
   - {fileID: 8431590116849326665}
-  - {fileID: 6154425804367113755}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1101662928963004330
@@ -862,53 +905,8 @@ MonoBehaviour:
   targetPos: {fileID: 0}
   unitStats: {fileID: 8690982353155902853}
   unitDamageAble: {fileID: 6415610435831543290}
-  unitRangeAttack: {fileID: 7743814342457317288}
+  unitRangeAttack: {fileID: 842025757285055090}
   unitRangeModel: {fileID: 5256083806518909581}
---- !u!1 &6403356286756466205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6154425804367113755}
-  - component: {fileID: 7743814342457317288}
-  m_Layer: 0
-  m_Name: Attack
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6154425804367113755
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6403356286756466205}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6715853963869822223}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7743814342457317288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6403356286756466205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 561c4b868b46f5d459c2ccb9068eef4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitRangeController: {fileID: 1101662928963004330}
 --- !u!1 &8297794947554456829
 GameObject:
   m_ObjectHideFlags: 0

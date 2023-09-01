@@ -10,6 +10,7 @@ public class UnitMeleeDieState : IUnitState
     public void Enter()
     {
         unitMeleeController.UnitMeleeModel.ChangeAnimation("Die", 1f);
+        unitMeleeController.UnitMeleeModel.BoxCollider2D.enabled = false;
     }
 
     public void Update()

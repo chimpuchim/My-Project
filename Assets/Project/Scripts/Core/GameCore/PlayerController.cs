@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    GameObject FindClosestEnemy(GameObject player)
+    public GameObject FindClosestEnemy(GameObject player)
     {
         string nameUnit = player.name.Substring(5, 5);
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
