@@ -7,7 +7,7 @@ public class UISceneController : Controller
 {
     public const string UISCENE_SCENE_NAME = "UIScene";
     
-    [SerializeField] private GameObject staticCanvas;
+    [SerializeField] private GameObject[] turnOffStartObjs;
 
     public override string SceneName()
     {
@@ -16,7 +16,11 @@ public class UISceneController : Controller
 
     public void OnStartBattle()
     {
-        staticCanvas.SetActive(false);
+        foreach (GameObject turnOffStartObj in turnOffStartObjs)
+        {
+            turnOffStartObj.SetActive(false);
+        }
+        
         GameController.Instance.IsStartBattle = true;
     }
 }
