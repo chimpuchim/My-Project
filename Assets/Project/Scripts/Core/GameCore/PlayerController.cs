@@ -32,11 +32,22 @@ public class PlayerController : MonoBehaviour
         playerUnits.Clear();
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
-        foreach (GameObject player in players)
+        if (players.Length > 0)
         {
-            UnitController unitController = player.transform.parent.GetComponent<UnitController>();
-            playerUnits.Add(player);
-            unitController.TargetPos = FindClosestEnemy(player).transform;
+            foreach (GameObject player in players)
+            {
+                UnitController unitController = player.transform.parent.GetComponent<UnitController>();
+                playerUnits.Add(player);
+
+                if (FindClosestEnemy(player) != null)
+                {
+                    unitController.TargetPos = FindClosestEnemy(player).transform;
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("Lose");
         }
     }
     
@@ -47,28 +58,30 @@ public class PlayerController : MonoBehaviour
         GameObject closestEnemy = null;
         float closestDistance = Mathf.Infinity;
         Vector3 currentPosition = Vector2.zero;
-        
-        if (nameUnit == "Melee")
+        if (enemies.Length > 0)
         {
-            currentPosition = player.transform.parent.GetComponent<UnitMeleeController>().UnitMeleeModel.transform.position;
-        }
-
-        if (nameUnit == "Range")
-        {
-            currentPosition = player.transform.parent.GetComponent<UnitRangeController>().UnitRangeModel.transform.position;
-        }
-        
-        
-        foreach (GameObject enemy in enemies)
-        {
-            float distanceToEnemy = Vector3.Distance(currentPosition, enemy.transform.position);
-            if (distanceToEnemy < closestDistance)
+            if (nameUnit == "Melee")
             {
-                closestDistance = distanceToEnemy;
-                closestEnemy = enemy;
+                currentPosition = player.transform.parent.GetComponent<UnitMeleeController>().UnitMeleeModel.transform.position;
+            }
+
+            if (nameUnit == "Range")
+            {
+                currentPosition = player.transform.parent.GetComponent<UnitRangeController>().UnitRangeModel.transform.position;
+            }
+        
+        
+            foreach (GameObject enemy in enemies)
+            {
+                float distanceToEnemy = Vector3.Distance(currentPosition, enemy.transform.position);
+                if (distanceToEnemy < closestDistance)
+                {
+                    closestDistance = distanceToEnemy;
+                    closestEnemy = enemy;
+                }
             }
         }
-
+        
         return closestEnemy;
     }
 }

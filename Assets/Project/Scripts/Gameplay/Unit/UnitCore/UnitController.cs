@@ -33,6 +33,11 @@ public class UnitController : MonoBehaviour
     {
         get => unitDamageAble;
     }
+    
+
+    protected virtual void Start()
+    {
+    }
 
     protected void CheckRotateModel(Transform unitModel)
     {

@@ -49,8 +49,9 @@ public class UnitMeleeController : UnitController
     }
     
     
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         stateMachine = new UnitStateMachine();
         stateMachine.ChangeState(new UnitMeleeIdleState(this));
     }
@@ -66,6 +67,4 @@ public class UnitMeleeController : UnitController
     {
         stateMachine.FixedUpdateCurrentState();
     }
-
-    
 }

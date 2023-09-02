@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
         set => isStartBattle = value;
     }
     
+    
     private void Awake()
     {
         if(Instance == null)

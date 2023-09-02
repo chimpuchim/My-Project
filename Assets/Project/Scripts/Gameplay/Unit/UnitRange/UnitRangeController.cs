@@ -25,8 +25,9 @@ public class UnitRangeController : UnitController
     }
 
     
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         stateMachine = new UnitStateMachine();
         stateMachine.ChangeState(new UnitRangeIdleState(this));
     }
