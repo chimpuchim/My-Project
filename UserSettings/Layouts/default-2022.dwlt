@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Simulator
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 17
+  controlID: 99
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 364
     height: 722.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,15 +120,15 @@ MonoBehaviour:
     y: 494.4
     width: 1172
     height: 228.4
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 18}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SimulatorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 881.6
     height: 494.4
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 17}
@@ -314,7 +314,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 27742
+  m_LastSelectedObjectID: 27766
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -337,7 +337,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 290.4
     y: 73.6
-    width: 879.6
+    width: 585.19995
     height: 473.4
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -447,7 +447,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Project/Prefabs/Bullet
+    - Assets/Project/Scenes/Lv1
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -455,16 +455,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Project/Prefabs/Bullet
+  - Assets/Project/Scenes/Lv1
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\unity3DProject\Freelance\SkibydyVsKamera
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 192.59998}
-    m_SelectedIDs: ec700000
-    m_LastClickedID: 28908
-    m_ExpandedIDs: 00000000866f0000886f00008a6f00008c6f00008e6f0000906f0000926f0000946f0000966f0000986f00009a6f00009c6f00009e6f0000a06f0000a26f0000a46f0000a66f0000a86f0000aa6f0000ac6f00009870000000ca9a3b
+    scrollPos: {x: 0, y: 492.59998}
+    m_SelectedIDs: 90eb0100
+    m_LastClickedID: 125840
+    m_ExpandedIDs: 00000000866f0000886f00008a6f00008c6f00008e6f0000906f0000926f0000946f0000966f0000986f00009a6f00009c6f00009e6f0000a06f0000a26f0000a46f0000a66f0000a86f0000aa6f0000ac6f000082eb01008eeb010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -517,9 +517,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 5e6c0000
-    m_LastClickedInstanceID: 27742
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000ee6200009c620000fc610000da6100004e620000566100008c620000846100002a610000c0610000dc62000024610000466100003c6100007e620000e06100004a610000746200006c620000d061000056620000b2610000b46100008a620000d26200007661000018620000a66100003062000094610000e46200002c610000f4610000a4620000a2620000486200005c620000286100002e61000010b60000d8b50000acb50000fab500008cb50000f0b50000dcb5000050b50000e0b5000044b600009cb50000feb50000ecb500005ab500003eb50000a2b500001eb60000b0b5000022b60000f6b500004ab5000072b60000bab50000ac42020096420200d41c010046670000906c000032bffeff9668000094680000a86800004c6d0000aa680000ac680000b0680000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -632,9 +632,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5e6c0000
-      m_LastClickedID: 27742
-      m_ExpandedIDs: 58efffff10fbffffe86b0000046c0000666c0000806c00009e6c0000
+      m_SelectedIDs: ac0f0200
+      m_LastClickedID: 0
+      m_ExpandedIDs: a411feff5213feff2615feffb625feff9c2bfefff845feff6046feff0656feffa463feff286dfeff3474feff8e74feff3884fefff894feffb295fefffe99feff8ea7fefff6cafeffc6cffefff6d0feffb2e0feffaee4feff78ecfeff5014ffff6820fffffe35ffff6036ffff4440fffffe4fffff3850ffff7250ffffa650ffffd850ffff0c51ffff40ecfffff8eeffff54efffff58efffff42f0ffff46f0ffff10fbffffe86b0000046c0000666c0000806c00009e6c0000aa6c0000b46c00005c11020076110200821102008c1102003cd402004ad4020054d402005ed4020076d402008ed402009ad40200a4d402002cd602008ed602009ad60200a4d6020038e90200600c0300bc0f0300bc470300cc470300dc130400f2130400fc130400081404002a1404004a1404005e1404006a140400761404008014040026170400ee170400fa1704000418040098550500ba550500d45505004456050060560500825605008e56050098560500005a0500b25a0500901e0600ec1e0600fa1e0600481f0600681f0600ba1f0600c61f0600d01f06009e330600d0330600fa330600cc340600d8340600e2340600f0340600223506004c350600d6350600f43506001e3606002a3606003436060090370600
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -678,8 +678,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 290.4
-    y: 73.6
+    x: 291.4
+    y: 19
     width: 879.6
     height: 473.4
   m_SerializedDataModeController:
@@ -1053,9 +1053,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.2119465, y: -3.256066, z: -0.09588955}
+    m_Target: {x: 365.04947, y: 1003.2004, z: 1.8275864}
     speed: 2
-    m_Value: {x: -4.2119465, y: -3.256066, z: -0.09588955}
+    m_Value: {x: 365.04947, y: 1003.2004, z: 1.8275864}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1105,9 +1105,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.259795
+    m_Target: 916.45325
     speed: 2
-    m_Value: 9.259795
+    m_Value: 916.45325
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1174,15 +1174,15 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13974, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Simulator
+    m_Image: {fileID: 3038311277492192215, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -1201,68 +1201,34 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_SerializedViewNames:
-  - UnityEditor.DeviceSimulation.SimulatorWindow
+  - UnityEditor.GameView
   m_SerializedViewValues:
-  - D:\unity3DProject\Freelance\SkibydyVsKamera\Library\PlayModeViewStates\c72c82b1c43706e4caa9831313075a2a
-  m_PlayModeViewName: GameView
+  - D:\unity3DProject\Freelance\SkibydyVsKamera\Library\PlayModeViewStates\c86cf3f78ca078140a1efd6927f61bcc
+  m_PlayModeViewName: Device Simulator
   m_ShowGizmos: 0
   m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 318, y: 565.5}
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
+  m_TargetSize: {x: 1080, y: 2338}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
   m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 0300000000000000000000000d000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -127.200005
-    m_HBaseRangeMax: 127.200005
-    m_VBaseRangeMin: -226.2
-    m_VBaseRangeMax: 226.2
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 879.6
-      height: 452.4
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 439.8, y: 226.2}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -439.8
-      y: -226.2
-      width: 879.6
-      height: 452.4
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1099.5, y: 591.75}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
+  m_SimulatorState:
+    controlPanelVisible: 0
+    controlPanelWidth: 0
+    controlPanelFoldoutKeys:
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    controlPanelFoldoutValues: 00
+    pluginNames:
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    pluginStates:
+    - '{}'
+    scale: 18
+    fitToScreenEnabled: 1
+    rotationDegree: 0
+    highlightSafeAreaEnabled: 0
+    friendlyName: Apple iPhone 12 mini
+    screenIndex: 0
+    networkReachability: 1
+    systemLanguage: 10
