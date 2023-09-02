@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/UIScene/UIScene.unity
     guid: 54fa514fbde12a14dbf34dd54997467c
+  - enabled: 1
+    path: Assets/Project/Scenes/WinPopup/WinPopup.unity
+    guid: ca6ea5b48bcfe8c46938292a7bc062ca
+  - enabled: 1
+    path: Assets/Project/Scenes/UpgradePopup/UpgradePopup.unity
+    guid: c35fd87dfda3efd45923b2f2691ee931
+  - enabled: 1
+    path: Assets/Project/Scenes/UnlockCharacter/UnlockCharacter.unity
+    guid: a417bc4f1a0aec641be5419b82d090bf
+  - enabled: 1
+    path: Assets/Project/Scenes/LosePopup/LosePopup.unity
+    guid: 7cdf8196b775a674ba92c6c6d17b829f
   m_configObjects: {}
