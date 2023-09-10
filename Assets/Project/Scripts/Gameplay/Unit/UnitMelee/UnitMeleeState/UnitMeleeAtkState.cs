@@ -23,6 +23,11 @@ public class UnitMeleeAtkState : IUnitState
         {
             unitMeleeController.StateMachine.ChangeState(new UnitMeleeDieState(unitMeleeController));
         }
+        
+        if (PlayerController.Instance.PlayerUnits.Count <= 0 || EnemyController.Instance.EnemyUnits.Count <= 0)
+        {
+            unitMeleeController.StateMachine.ChangeState(new UnitMeleeWinState(unitMeleeController));
+        }
     }
 
     public void FixUpdate()

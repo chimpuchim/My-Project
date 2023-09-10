@@ -23,4 +23,14 @@ public class UISceneController : Controller
         
         GameController.Instance.IsStartBattle = true;
     }
+
+    public void OnBuyUnit(string name)
+    {
+        PlayerYardController.Instance.BuyUnit(name);
+    }
+
+    public void OnLoadScene(string sceneName)
+    {
+        Manager.Load(sceneName);
+    }
 }

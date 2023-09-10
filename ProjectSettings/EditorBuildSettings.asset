@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Project/Scenes/LobbyScene/LobbyScene.unity
+    guid: cbbb29dca67aa394b8fc1182b2ed17b1
+  - enabled: 1
     path: Assets/Project/Scenes/Lv1/Lv1.unity
     guid: 9167c01de8894144a9dfee46e33ac4ad
   - enabled: 1
@@ -23,10 +26,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/LosePopup/LosePopup.unity
     guid: 7cdf8196b775a674ba92c6c6d17b829f
-  - enabled: 1
-    path: Assets/Project/Scenes/LobbyScene/LobbyScene.unity
-    guid: cbbb29dca67aa394b8fc1182b2ed17b1
-  - enabled: 1
-    path: Assets/Project/Scenes/LobbyScene/LobbyScene.unity
-    guid: cbbb29dca67aa394b8fc1182b2ed17b1
   m_configObjects: {}

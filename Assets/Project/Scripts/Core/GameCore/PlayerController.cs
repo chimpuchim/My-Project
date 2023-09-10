@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using SS.View;
 
 public class PlayerController : MonoBehaviour
 {
@@ -45,9 +46,10 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        else
+        else if(players.Length <= 0 && !GameController.Instance.IsEnd)
         {
-            Debug.Log("Lose");
+            Manager.Add("LosePopup");
+            GameController.Instance.IsEnd = true;
         }
     }
     

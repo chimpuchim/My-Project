@@ -11,4 +11,9 @@ public class WinPopupController : Controller
     {
         return WINPOPUP_SCENE_NAME;
     }
+    
+    public void OnLoadScene(string sceneName)
+    {
+        Manager.Load(sceneName);
+    }
 }

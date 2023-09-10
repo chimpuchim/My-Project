@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using SS.View;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -45,9 +46,10 @@ public class EnemyController : MonoBehaviour
                 }
             }
         }
-        else
+        else if(enemys.Length <= 0 && !GameController.Instance.IsEnd)
         {
-            Debug.Log("Win");
+            Manager.Add("WinPopup");
+            GameController.Instance.IsEnd = true;
         }
     }
     

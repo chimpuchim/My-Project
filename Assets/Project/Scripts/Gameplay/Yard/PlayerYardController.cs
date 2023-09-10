@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
+
 
 public class PlayerYardController : MonoBehaviour
 {
@@ -43,6 +43,29 @@ public class PlayerYardController : MonoBehaviour
             if (playerYard.GetComponent<PlayerYard>().CheckEmpty())
             {
                 playerYardsEmpty.Add(playerYard);
+            }
+        }
+    }
+
+    public void BuyUnit(string name)
+    {
+        if (playerYardsEmpty != null)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, playerYardsEmpty.Count);
+            GameObject randomObject = playerYardsEmpty[randomIndex];
+            
+            if (name == "Melee")
+            {
+                randomObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+                YardEmptyToList();
+                PlayerController.Instance.FindAndAddPlayers();
+            }
+
+            if (name == "Range")
+            {
+                randomObject.transform.GetChild(1).GetChild(0).gameObject.SetActive(true);
+                YardEmptyToList();
+                PlayerController.Instance.FindAndAddPlayers();
             }
         }
     }

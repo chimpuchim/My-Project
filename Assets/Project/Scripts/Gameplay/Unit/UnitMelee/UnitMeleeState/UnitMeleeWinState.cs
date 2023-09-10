@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class UnitMeleeWinState : IUnitState
 {
     private UnitMeleeController unitMeleeController;
@@ -9,7 +11,7 @@ public class UnitMeleeWinState : IUnitState
     
     public void Enter()
     {
-        
+        unitMeleeController.UnitMeleeModel.ChangeAnimation("Win", 1f);
     }
 
     public void Update()

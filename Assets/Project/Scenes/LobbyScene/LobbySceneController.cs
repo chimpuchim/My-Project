@@ -11,4 +11,9 @@ public class LobbySceneController : Controller
     {
         return LOBBYSCENE_SCENE_NAME;
     }
+
+    public void OnOpenSceneLv()
+    {
+        Manager.Load("Lv1");
+    }
 }

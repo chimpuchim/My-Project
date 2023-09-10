@@ -16,6 +16,13 @@ public class GameController : MonoBehaviour
         set => isStartBattle = value;
     }
     
+    [SerializeField] private bool isEnd;
+    public bool IsEnd
+    {
+        get => isEnd;
+        set => isEnd = value;
+    }
+    
     
     private void Awake()
     {

@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Canvas: {fileID: 8754637158026345134}
   m_Camera: {fileID: 0}
-  FullScreen: 1
+  FullScreen: 0
   Animation: {fileID: 8754637156297780078}
   isActiveShield: 1
 --- !u!1 &84599707
@@ -619,7 +619,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 726024584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1387962}
+        m_TargetAssemblyTypeName: WinPopupController, Assembly-CSharp
+        m_MethodName: OnLoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lv1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &726024584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,7 +923,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1215810121}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1387962}
+        m_TargetAssemblyTypeName: WinPopupController, Assembly-CSharp
+        m_MethodName: OnLoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LobbyScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1215810121
 MonoBehaviour:
   m_ObjectHideFlags: 0

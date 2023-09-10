@@ -645,6 +645,7 @@ MonoBehaviour:
   playerController: {fileID: 1299363619}
   enemyController: {fileID: 1096795145}
   isStartBattle: 0
+  isEnd: 0
 --- !u!1 &317909532 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2457668170800245773, guid: a0c2fd43663a6e542ae73e983e9ad053, type: 3}
@@ -2491,7 +2492,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14cf5ad4e7ea5e74182bd3dcf27b329b, type: 2}
+  - {fileID: 2100000, guid: af120c4221919984ca616d11e98f8978, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

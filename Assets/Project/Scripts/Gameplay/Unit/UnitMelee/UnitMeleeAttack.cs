@@ -9,8 +9,11 @@ public class UnitMeleeAttack : UnitAttack
     
     public override void AttackNor()
     {
-        unitMeleeController.UnitDamageAble.SendDamage(unitMeleeController.TargetPos.parent.gameObject.GetComponent<UnitController>().UnitDamageAble);
-        unitMeleeController.UnitMeleeModel.FightFx.GetComponent<ParticleSystem>().Play();
-        unitMeleeController.UnitMeleeUIHealthBar.ShowDameSendText();
+        if (unitMeleeController.DistanceToTarget < unitMeleeController.DistanceAttack)
+        {
+            unitMeleeController.UnitDamageAble.SendDamage(unitMeleeController.TargetPos.parent.gameObject.GetComponent<UnitController>().UnitDamageAble);
+            unitMeleeController.UnitMeleeModel.FightFx.GetComponent<ParticleSystem>().Play();
+            unitMeleeController.UnitMeleeUIHealthBar.ShowDameSendText();
+        }
     }
 }

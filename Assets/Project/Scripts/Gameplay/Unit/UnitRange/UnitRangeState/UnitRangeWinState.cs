@@ -9,7 +9,7 @@ public class UnitRangeWinState : IUnitState
     
     public void Enter()
     {
-        
+        unitRangeController.UnitRangeModel.ChangeAnimation("Win", 1f);
     }
 
     public void Update()
