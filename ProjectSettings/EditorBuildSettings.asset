@@ -26,4 +26,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/LosePopup/LosePopup.unity
     guid: 7cdf8196b775a674ba92c6c6d17b829f
+  - enabled: 1
+    path: Assets/Project/Scenes/SettingPopup/SettingPopup.unity
+    guid: 46d22ccfe6e7ba849830476233cde414
+  - enabled: 1
+    path: Assets/Project/Scenes/CardPopup/CardPopup.unity
+    guid: 239d6a928f151384eab904d65d1e0bd4
+  - enabled: 1
+    path: Assets/Project/Scenes/CollectionPopup/CollectionPopup.unity
+    guid: b1b250cb4de73d143ab41cd4bffcbcbb
+  - enabled: 1
+    path: Assets/Project/Scenes/CollectionPopup/CollectionPopup.unity
+    guid: b1b250cb4de73d143ab41cd4bffcbcbb
+  - enabled: 1
+    path: Assets/Project/Scenes/DiscornetPopup/DiscornetPopup.unity
+    guid: ebd41fc981eef8148aafddc75dff7236
+  - enabled: 1
+    path: Assets/Project/Scenes/UnlockNoti/UnlockNoti.unity
+    guid: 9bebe6881a4f7a34e93f62e5282d9647
+  - enabled: 1
+    path: Assets/Project/Scenes/MiniShopPopup/MiniShopPopup.unity
+    guid: c2ee03a228d810f4e9a6b8c850d1cb9a
   m_configObjects: {}
