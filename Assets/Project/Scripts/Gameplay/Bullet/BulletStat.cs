@@ -10,5 +10,10 @@ public class BulletStat : MonoBehaviour
       get => speed;
    }
    
-   
+   [SerializeField] private float damage;
+   public float Damage
+   {
+      get => damage;
+      set => damage = value;
+   }
 }

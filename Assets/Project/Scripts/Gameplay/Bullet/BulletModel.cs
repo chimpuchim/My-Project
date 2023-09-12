@@ -28,7 +28,7 @@ public class BulletModel : MonoBehaviour
         if (other.transform.parent.GetComponent<UnitController>() != null && other.CompareTag(unitType))
         {
             UnitController unitController = other.transform.parent.gameObject.GetComponent<UnitController>();
-            unitController.UnitDamageAble.SendDamage(unitController.UnitDamageAble);
+            unitController.UnitDamageAble.ReceiveDamage(bulletController.BulletStat.Damage);
             
             Destroy(gameObject);
         }

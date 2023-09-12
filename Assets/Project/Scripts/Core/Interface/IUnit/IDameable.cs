@@ -1,6 +1,6 @@
 public interface IRecieveDamage
 {
-    public void RecieveDamage(float damageRecieve);
+    public void ReceiveDamage(float damageRecieve);
 }
 
 public interface ISendDamege

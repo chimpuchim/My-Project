@@ -23,6 +23,7 @@ public class UnitRangeAttack : UnitAttack
             
             GameObject bullet = Instantiate(bulletPrefab[int.Parse(numberUnit) - 1], transform.position, Quaternion.identity);
             BulletController bulletController = bullet.GetComponent<BulletController>();
+            bulletController.BulletStat.Damage = unitRangeController.UnitDamageAble.Damage;
             Rigidbody2D bulletRigidbody = bulletController.BulletModel.Rigidbody2D;
             
             if (unitRangeController.UnitRangeModel.CompareTag("Enemy"))

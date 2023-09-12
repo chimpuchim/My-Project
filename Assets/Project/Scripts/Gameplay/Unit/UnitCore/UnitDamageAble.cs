@@ -12,7 +12,7 @@ public class UnitDamageAble : MonoBehaviour, IRecieveDamage, ISendDamege
         set => damage = value;
     }
 
-    public void RecieveDamage(float damageRecieve)
+    public void ReceiveDamage(float damageRecieve)
     {
         unitController.UnitStats.Heal(-damageRecieve);
 
@@ -25,6 +25,6 @@ public class UnitDamageAble : MonoBehaviour, IRecieveDamage, ISendDamege
 
     public void SendDamage(IRecieveDamage client)
     {
-        client.RecieveDamage(damage);
+        client.ReceiveDamage(damage);
     }
 }
