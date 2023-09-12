@@ -21,6 +21,8 @@ public class UnitMeleeDieState : IUnitState
         {
             GameController.Instance.CoinLevel += unitMeleeController.UnitMoney.Money;
         }
+
+        unitMeleeController.UnitMeleeModel.Agent.speed = 0;
     }
 
     public void Update()

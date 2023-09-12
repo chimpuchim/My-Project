@@ -47,6 +47,18 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 3410823496120977016, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410823496120977016, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410823496120977016, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3518216224597894570, guid: f9951107c86ea0348b02372bc47d2e27, type: 3}
       propertyPath: m_Enabled
       value: 1

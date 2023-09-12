@@ -20,13 +20,13 @@ public class CurrencyConverter : MonoBehaviour
 
         if (amount >= 1000000)
         {
-            int millions = amount / 1000000;
-            convertedMoney = millions + "m";
+            double millions = (double)amount / 1000000.0;
+            convertedMoney = millions.ToString("0.#") + "m";
         }
         else if (amount >= 1000)
         {
-            int thousands = amount / 1000;
-            convertedMoney = thousands + "k";
+            double thousands = (double)amount / 1000.0;
+            convertedMoney = thousands.ToString("0.#") + "k";
         }
         else
         {

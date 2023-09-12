@@ -7,7 +7,9 @@ public class UISceneController : Controller
 {
     public const string UISCENE_SCENE_NAME = "UIScene";
     
-    [SerializeField] private GameObject[] turnOffStartObjs;
+    [Header("In game")]
+        [SerializeField] private GameObject[] turnOffStartObjs;
+    
 
     public override string SceneName()
     {
@@ -38,7 +40,7 @@ public class UISceneController : Controller
         
         GameController.Instance.IsStartBattle = true;
     }
-
+    
     public void OnBuyUnit(string name)
     {
         PlayerYardController.Instance.BuyUnit(name);

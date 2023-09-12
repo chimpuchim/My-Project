@@ -40,7 +40,7 @@ public class WinPopupController : Controller
 
     public void OnClaimGold(int xCoin)
     {
-        MoneyManager.instance.AddMoney(GameController.Instance.CoinLevel * xCoin);
+        MoneyManager.Instance.AddMoney(GameController.Instance.CoinLevel * xCoin);
         OnLoadScene("Lv1");
     }
 }

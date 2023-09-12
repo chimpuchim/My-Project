@@ -382,10 +382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6be5870fa9a9e4081ace81b3898a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1299363619}
-  enemyController: {fileID: 1096795145}
-  isStartBattle: 0
-  isEnd: 0
 --- !u!1001 &351697322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -821,7 +817,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &594607595
@@ -989,7 +985,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &634081237
@@ -1152,6 +1148,10 @@ PrefabInstance:
     - target: {fileID: 3683051251564379906, guid: 8f94b8032ad2a8f448d182728051b9c4, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485925494219949484, guid: 8f94b8032ad2a8f448d182728051b9c4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4485925494219949484, guid: 8f94b8032ad2a8f448d182728051b9c4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2595,6 +2595,10 @@ PrefabInstance:
     - target: {fileID: 3683051251564379906, guid: 8f94b8032ad2a8f448d182728051b9c4, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485925494219949484, guid: 8f94b8032ad2a8f448d182728051b9c4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4485925494219949484, guid: 8f94b8032ad2a8f448d182728051b9c4, type: 3}
       propertyPath: m_AnchorMax.y

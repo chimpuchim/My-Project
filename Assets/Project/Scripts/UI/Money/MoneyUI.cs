@@ -7,17 +7,12 @@ public class MoneyUI : MonoBehaviour
 
     private void Start()
     {
-        MoneyManager.instance.MoneyChanged += UpdateMoneyUI;
-        UpdateMoneyUI(MoneyManager.instance.Money);
+        MoneyManager.Instance.MoneyChanged += UpdateMoneyUI;
+        UpdateMoneyUI(MoneyManager.Instance.Money);
     }
 
     private void UpdateMoneyUI(int newMoney)
     {
         moneyText.text = CurrencyConverter.GetInstance().ConvertMoney(newMoney);
-    }
-
-    private void OnDestroy()
-    {
-        MoneyManager.instance.MoneyChanged -= UpdateMoneyUI;
     }
 }

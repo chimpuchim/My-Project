@@ -15,15 +15,15 @@ public class SaveManager : MonoBehaviour
         return Instance;
     }
     
-    public void SaveData(DataType dataType, int value)
+    public void SaveData(GameDataType gameDataType, int value)
     {
-        PlayerPrefs.SetInt(dataType.ToString(), value);
+        PlayerPrefs.SetInt(gameDataType.ToString(), value);
         PlayerPrefs.Save();
     }
 
-    public int LoadData(DataType dataType)
+    public int LoadData(GameDataType gameDataType)
     {
-        return PlayerPrefs.GetInt(dataType.ToString());
+        return PlayerPrefs.GetInt(gameDataType.ToString());
     }
 
     public void ResetData()

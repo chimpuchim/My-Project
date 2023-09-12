@@ -26,4 +26,9 @@ public class MiniShopPopupController : Controller
     {
         Manager.Close();
     }
+    
+    public void OnBuyPack(int money)
+    {
+        MoneyManager.Instance.AddMoney(money);
+    }
 }

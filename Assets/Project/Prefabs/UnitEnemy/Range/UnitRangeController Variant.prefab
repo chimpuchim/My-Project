@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: isActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1272409956611854684, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
+      propertyPath: m_Value
+      value: 0.47
+      objectReference: {fileID: 0}
     - target: {fileID: 1616805028212983871, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -102,6 +106,18 @@ PrefabInstance:
     - target: {fileID: 8248309613600293801, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536819262897672718, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536819262897672718, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536819262897672718, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9163144113464408327, guid: 9721e749378e3d84b91fc0ea3555c222, type: 3}
       propertyPath: m_Mesh

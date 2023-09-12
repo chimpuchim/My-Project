@@ -20,6 +20,7 @@ public class PlayerYardController : MonoBehaviour
         get => playerYardsEmpty;
     }
     
+    
     private void Awake()
     {
         if(Instance == null)
@@ -49,7 +50,7 @@ public class PlayerYardController : MonoBehaviour
 
     public void BuyUnit(string name)
     {
-        if (playerYardsEmpty != null)
+        if (playerYardsEmpty.Count > 0)
         {
             int randomIndex = UnityEngine.Random.Range(0, playerYardsEmpty.Count);
             GameObject randomObject = playerYardsEmpty[randomIndex];

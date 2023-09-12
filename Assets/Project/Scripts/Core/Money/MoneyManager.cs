@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MoneyManager : MonoBehaviour
 {
-    public static MoneyManager instance;
+    public static MoneyManager Instance;
     
     [SerializeField] private int money = 0;
     public int Money
@@ -16,9 +16,9 @@ public class MoneyManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -32,6 +32,7 @@ public class MoneyManager : MonoBehaviour
     public void AddMoney(int amount)
     {
         money += amount;
+        MoneyChanged?.Invoke(money);
         SaveMoney();
     }
 
@@ -40,21 +41,22 @@ public class MoneyManager : MonoBehaviour
         if (money >= amount)
         {
             money -= amount;
+            MoneyChanged?.Invoke(money);
             SaveMoney(); 
         }
     }
 
     private void SaveMoney()
     {
-        SaveManager.GetInstance().SaveData(DataType.Money, money);
+        SaveManager.GetInstance().SaveData(GameDataType.Money, money);
         PlayerPrefs.Save();
     }
 
     private void LoadMoney()
     {
-        if (PlayerPrefs.HasKey(DataType.Money.ToString()))
+        if (PlayerPrefs.HasKey(GameDataType.Money.ToString()))
         {
-            money = SaveManager.GetInstance().LoadData(DataType.Money);
+            money = SaveManager.GetInstance().LoadData(GameDataType.Money);
         }
     }
 }
