@@ -391,6 +391,7 @@ Transform:
   - {fileID: 1827971265909650842}
   - {fileID: 8213746021958937596}
   - {fileID: 8653336345659590965}
+  - {fileID: 7108556561427612827}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -410,6 +411,7 @@ MonoBehaviour:
   targetPos: {fileID: 0}
   unitStats: {fileID: 3354767066912687864}
   unitDamageAble: {fileID: 4109036550822634186}
+  unitMoney: {fileID: 3179052862039172786}
   unitMeleeAttack: {fileID: 8702448325396501824}
   unitMeleeMovement: {fileID: 6669027751065359268}
   unitMeleeModel: {fileID: 3670970928631670214}
@@ -15639,3 +15641,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitMeleeController: {fileID: 1502285524019855518}
   dameSendText: {fileID: 23806932150802244}
+--- !u!1 &9120877059975110798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7108556561427612827}
+  - component: {fileID: 3179052862039172786}
+  m_Layer: 0
+  m_Name: Money
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7108556561427612827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120877059975110798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5314435646138214329}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3179052862039172786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120877059975110798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956550dd3f857be44aaad501994fb0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitController: {fileID: 1502285524019855518}
+  money: 10

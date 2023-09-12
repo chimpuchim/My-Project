@@ -33,6 +33,12 @@ public class UnitController : MonoBehaviour
     {
         get => unitDamageAble;
     }
+
+    [SerializeField] private UnitMoney unitMoney;
+    public UnitMoney UnitMoney
+    {
+        get => unitMoney;
+    }
     
 
     protected virtual void Start()

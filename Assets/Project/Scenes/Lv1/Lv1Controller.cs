@@ -15,14 +15,21 @@ public class Lv1Controller : Controller
 
     private void Awake()
     {
-        AddUIScene();
+        OnAddScene("UIScene");
     }
 
-    private void Start() {
-    }
-
-    private void AddUIScene()
+    public void OnLoadScene(string sceneName)
     {
-        Manager.Add("UIScene");
+        Manager.Load(sceneName);
+    }
+    
+    public void OnAddScene(string sceneName)
+    {
+        Manager.Add(sceneName);
+    }
+    
+    public void OnClose()
+    {
+        Manager.Close();
     }
 }

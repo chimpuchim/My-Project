@@ -16,4 +16,14 @@ public class LosePopupController : Controller
     {
         Manager.Load(sceneName);
     }
+    
+    public void OnAddScene(string sceneName)
+    {
+        Manager.Add(sceneName);
+    }
+    
+    public void OnClose()
+    {
+        Manager.Close();
+    }
 }

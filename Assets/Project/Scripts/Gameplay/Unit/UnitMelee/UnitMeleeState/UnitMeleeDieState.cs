@@ -16,6 +16,11 @@ public class UnitMeleeDieState : IUnitState
         unitMeleeController.UnitMeleeModel.BoxCollider2D.enabled = false;
         
         unitMeleeController.StartCoroutine(TurnOffGameObjectAfterDelay(1f));
+
+        if (unitMeleeController.UnitMeleeModel.CompareTag("Enemy"))
+        {
+            GameController.Instance.CoinLevel += unitMeleeController.UnitMoney.Money;
+        }
     }
 
     public void Update()

@@ -1034,9 +1034,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SettingsPopupController, Assembly-CSharp
-        m_MethodName: Close
+      - m_Target: {fileID: 1387962}
+        m_TargetAssemblyTypeName: SettingPopupController, Assembly-CSharp
+        m_MethodName: OnClose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1628,7 +1628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Controller: {fileID: 1387962}
-  m_AnimationType: 2
+  m_AnimationType: 1
   m_ShowEaseType: 27
   m_HideEaseType: 26
 --- !u!224 &8754637156297780079

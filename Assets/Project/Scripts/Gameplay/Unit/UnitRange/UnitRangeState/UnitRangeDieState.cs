@@ -17,6 +17,11 @@ public class UnitRangeDieState : IUnitState
         unitRangeController.UnitRangeModel.BoxCollider2D.enabled = false;
         
         unitRangeController.StartCoroutine(TurnOffGameObjectAfterDelay(1f));
+
+        if (unitRangeController.UnitRangeModel.CompareTag("Enemy"))
+        {
+            GameController.Instance.CoinLevel += unitRangeController.UnitMoney.Money;
+        }
     }
 
     public void Update()

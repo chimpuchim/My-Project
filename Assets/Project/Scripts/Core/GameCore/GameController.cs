@@ -6,17 +6,21 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance;
 
-    [SerializeField] private PlayerController playerController;
-    [SerializeField] private EnemyController enemyController;
+    private int coinLevel;
+    public int CoinLevel
+    {
+        get => coinLevel;
+        set => coinLevel = value;
+    }
 
-    [SerializeField] private bool isStartBattle;
+    private bool isStartBattle;
     public bool IsStartBattle
     {
         get => isStartBattle;
         set => isStartBattle = value;
     }
     
-    [SerializeField] private bool isEnd;
+    private bool isEnd;
     public bool IsEnd
     {
         get => isEnd;

@@ -12,8 +12,18 @@ public class LobbySceneController : Controller
         return LOBBYSCENE_SCENE_NAME;
     }
 
-    public void OnOpenSceneLv()
+    public void OnLoadScene(string sceneName)
     {
-        Manager.Load("Lv1");
+        Manager.Load(sceneName);
+    }
+    
+    public void OnAddScene(string sceneName)
+    {
+        Manager.Add(sceneName);
+    }
+    
+    public void OnClose()
+    {
+        Manager.Close();
     }
 }

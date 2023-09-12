@@ -13,6 +13,21 @@ public class UISceneController : Controller
     {
         return UISCENE_SCENE_NAME;
     }
+    
+    public void OnLoadScene(string sceneName)
+    {
+        Manager.Load(sceneName);
+    }
+    
+    public void OnAddScene(string sceneName)
+    {
+        Manager.Add(sceneName);
+    }
+    
+    public void OnClose()
+    {
+        Manager.Close();
+    }
 
     public void OnStartBattle()
     {
@@ -27,10 +42,5 @@ public class UISceneController : Controller
     public void OnBuyUnit(string name)
     {
         PlayerYardController.Instance.BuyUnit(name);
-    }
-
-    public void OnLoadScene(string sceneName)
-    {
-        Manager.Load(sceneName);
     }
 }
