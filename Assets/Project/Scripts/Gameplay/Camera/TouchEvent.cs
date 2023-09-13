@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Lean.Touch;
 using UnityEngine;
+using SS.View;
 
 public class TouchEvent : MonoBehaviour
 {
@@ -85,44 +86,49 @@ public class TouchEvent : MonoBehaviour
         PlayerYard playerYardTouch = yardTouch.GetComponent<PlayerYard>();
         string objectSelectedName = objSelected.parent.name;
 
-        if (playerYardTouch.UnitActive != null)
+        if (playerYardTouch.UnitActive != null && playerYardTouch.UnitActive.name == objectSelectedName)
         {
-            if (playerYardTouch.UnitActive != null && playerYardTouch.UnitActive.name == objectSelectedName)
+            string numberUnit = Regex.Match(objectSelectedName, @"\d+").Value;
+            string typeUnit = objectSelectedName.Substring(0, Mathf.Min(5, objectSelectedName.Length));
+    
+            List<GameObject> unitsToCheck = null;
+    
+            if (typeUnit == "Melee")
             {
-                string numberUnit = Regex.Match(objectSelectedName, @"\d+").Value;
-                string typeUnit = objectSelectedName.Substring(0, Mathf.Min(5, objectSelectedName.Length));
-        
-                List<GameObject> unitsToCheck = null;
-        
-                if (typeUnit == "Melee")
-                {
-                    unitsToCheck = playerYardTouch.MeleeUnits;
-                }
-                else if (typeUnit == "Range")
-                {
-                    unitsToCheck = playerYardTouch.RangeUnits;
-                }
-        
-                if (unitsToCheck != null)
-                {
-                    int selectedIndex = int.Parse(numberUnit);
-            
-                    if (selectedIndex >= unitsToCheck.Count)
-                    {
-                        Debug.Log("Max level");
-                        return;
-                    }
-            
-                    unitsToCheck[selectedIndex].SetActive(true);
-            
-                    if (selectedIndex > 0)
-                    {
-                        unitsToCheck[selectedIndex - 1].SetActive(false);
-                    }
-            
-                    objSelected.parent.gameObject.SetActive(false);
-                }
+                unitsToCheck = playerYardTouch.MeleeUnits;
             }
+            else if (typeUnit == "Range")
+            {
+                unitsToCheck = playerYardTouch.RangeUnits;
+            }
+    
+            if (unitsToCheck != null)
+            {
+                int selectedIndex = int.Parse(numberUnit);
+        
+                if (selectedIndex >= unitsToCheck.Count)
+                {
+                    Debug.Log("Max level");
+                    return;
+                }
+
+                if (SaveManager.GetInstance().LoadIntData(typeUnit) < selectedIndex)
+                {
+                    SaveManager.GetInstance().SaveIntData(typeUnit, selectedIndex);
+                    Manager.Add("UnlockNoti");
+                }
+                
+                unitsToCheck[selectedIndex].SetActive(true);
+        
+                if (selectedIndex > 0)
+                {
+                    unitsToCheck[selectedIndex - 1].SetActive(false);
+                }
+        
+                objSelected.parent.gameObject.SetActive(false);
+            }
+            
+            
         }
     }
     

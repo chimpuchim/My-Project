@@ -48,15 +48,15 @@ public class MoneyManager : MonoBehaviour
 
     private void SaveMoney()
     {
-        SaveManager.GetInstance().SaveData(GameDataType.Money, money);
+        SaveManager.GetInstance().SaveIntData(EGameDataType.Money.ToString(), money);
         PlayerPrefs.Save();
     }
 
     private void LoadMoney()
     {
-        if (PlayerPrefs.HasKey(GameDataType.Money.ToString()))
+        if (PlayerPrefs.HasKey(EGameDataType.Money.ToString()))
         {
-            money = SaveManager.GetInstance().LoadData(GameDataType.Money);
+            money = SaveManager.GetInstance().LoadIntData(EGameDataType.Money.ToString());
         }
     }
 }

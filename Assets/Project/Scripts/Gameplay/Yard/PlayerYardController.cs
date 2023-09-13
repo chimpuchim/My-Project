@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 
@@ -32,6 +33,45 @@ public class PlayerYardController : MonoBehaviour
             Destroy(this);
         }
         
+        SetupUnitStart();
+    }
+
+    private void SetupUnitStart()
+    {
+        foreach (GameObject playerYard in playerYards)
+        {
+            if (PlayerPrefs.HasKey(playerYard.name))
+            {
+                if (SaveManager.GetInstance().LoadStringData(playerYard.name) == "None")
+                {
+                    foreach (Transform childTransform in playerYard.transform.GetChild(0))
+                    {
+                       childTransform.gameObject.SetActive(false);
+                    }
+                    foreach (Transform childTransform in playerYard.transform.GetChild(1))
+                    {
+                       childTransform.gameObject.SetActive(false);
+                    }
+                }
+                else
+                {
+                    string[] parts = SaveManager.GetInstance().LoadStringData(playerYard.name).Split(',');
+                    
+                    string typeUnit = parts[1];
+                    string unitNumber = parts[2];
+
+                    if (typeUnit == "Melee")
+                    {
+                        playerYard.transform.GetChild(0).GetChild(int.Parse(unitNumber) - 1).gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        playerYard.transform.GetChild(1).GetChild(int.Parse(unitNumber) - 1).gameObject.SetActive(true);
+                    }
+                }
+            }
+        }
+        
         YardEmptyToList();
     }
 
@@ -44,6 +84,11 @@ public class PlayerYardController : MonoBehaviour
             if (playerYard.GetComponent<PlayerYard>().CheckEmpty())
             {
                 playerYardsEmpty.Add(playerYard);
+                SaveManager.GetInstance().SaveStringData(playerYard.name, "None");
+            }
+            else
+            {
+                SaveManager.GetInstance().SaveStringData(playerYard.name, playerYard.name + "," + playerYard.GetComponent<PlayerYard>().UnitActive.name.Substring(0, 5)+ "," + Regex.Match(playerYard.GetComponent<PlayerYard>().UnitActive.name, @"\d+").Value);
             }
         }
     }

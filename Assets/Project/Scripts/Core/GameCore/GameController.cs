@@ -38,5 +38,15 @@ public class GameController : MonoBehaviour
         {
             Destroy(this);
         }
+
+        if (!PlayerPrefs.HasKey("Melee"))
+        {
+            SaveManager.GetInstance().SaveIntData("Melee", 0);
+        }
+        
+        if (!PlayerPrefs.HasKey("Range"))
+        {
+            SaveManager.GetInstance().SaveIntData("Range", 0);
+        }
     }
 }

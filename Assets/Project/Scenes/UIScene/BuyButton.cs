@@ -11,7 +11,6 @@ public class BuyButton : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(MoneyManager.Instance.Money);
         if(int.Parse(moneyText.text) > MoneyManager.Instance.Money)
         {
             buyButton.interactable = false;
